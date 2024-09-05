@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #FFF8F8;
+}
+
+.container {
+    position: fixed;
+    background-color: #f5d6e3;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 400px;
+}
+
+/* .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #f1d9da;
+} */
+
+.container:hover {
+    box-shadow: 0 2px 12px #fdcedf, inset 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: 0.275s;
+}
+
+.form {
+    padding: 45px 40px;
+}
+
+/* .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1d9da;
+    width: 361px;
+    height: 317px;
+    position: absolute;
+} */
+
+h2 {
+    text-align: center;
+    font-family:monospace;
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+    /* color: #f759b5; */
+    color: rgb(59, 59, 59);
+} 
+
+/* h2 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: monospace;
+    top: 15px;
+} */
+
+.container:hover h2 {
+    color: rgb(221, 30, 141);
+    transition: 0.275s;
+    transform: scale(1.05);
+    text-shadow: #dbaac1 1px 0 5px;
+}
+
+.container:hover .icon {
+    color: rgb(221, 30, 141);
+}
+
+.inputField {
+    position: relative;
+    padding-bottom: 35px;
+}
+
+/* .inputField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    padding: 10px
+} */
+
+.inputField input {
+    display: block;
+    font-size: 1.35rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    padding: 7px 30px;
+    outline: none;
+}
+
+.inputField:hover input {
+    border: 1.5px solid rgb(201, 24, 112);
+    box-shadow: 3px 2px 12px #fdcedf, inset 0 0 2px #979696;
+    transition: 0.275s;
+}
+
+.inputField input:focus {
+    outline: 0;
+    border: 1.7px solid rgb(201, 24, 112);
+    box-shadow: 3px 2px 12px #fdcedf, inset 0 0 2px #979696;
+    transition: 0.275s;
+}
+
+.inputField input::placeholder {
+    color: #ccc;
+    font-size: 1.25rem;
+}
+
+/* Color for success and error */
+
+.inputField.success input {
+    border-color: var(--success-color);
+}
+
+.inputField.error input {
+    border-color: var(--error-color);
+}
+
+/*This one for error case, show the small message when error.*/
+.inputField small {
+    font-size: 1rem;
+    color: var(--error-color);
+    position: absolute;
+    right: 1px;
+    visibility: hidden; /* for hide it and show when ti got invalid input */
+}
+
+.inputField.error small {
+    visibility: visible; /* when it error, show the small text */
+}
+
+.inputField .icon {
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 10px;
+    left: 5px;
+    line-height: 48px;
+}
+
+.inputField2 {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.inputField2 input {
+    display: block;
+    font-size: 1.35rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    padding: 7px 30px;
+    outline: none;
+}
+
+.inputField2:hover input {
+    border: 1.5px solid rgb(201, 24, 112);
+    box-shadow: 3px 2px 12px #fdcedf, inset 0 0 2px #979696;
+    transition: 0.275s;
+}
+
+.inputField2 input:focus {
+    outline: 0;
+    border: 1.7px solid rgb(201, 24, 112);
+    box-shadow: 3px 2px 12px #fdcedf, inset 0 0 2px #979696;
+    transition: 0.275s;
+}
+
+.inputField2 input::placeholder {
+    color: #ccc;
+    font-size: 1.25rem;
+}
+
+/* Color for success and error */
+
+.inputField2.success input {
+    border-color: var(--success-color);
+}
+
+.inputField2.error input {
+    border-color: var(--error-color);
+}
+
+/*This one for error case, show the small message when error.*/
+.inputField2 small {
+    font-size: 1rem;
+    color: var(--error-color);
+    position: absolute;
+    right: 1px;
+    visibility: hidden; /* for hide it and show when ti got invalid input */
+}
+
+.inputField2.error small {
+    visibility: visible; /* when it error, show the small text */
+}
+
+.inputField2 .icon {
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 10px;
+    left: 5px;
+    line-height: 48px;
+}
+
+.container .forgetAndRememberPart {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+.forgetAndRememberPart label {
+    display: flex;
+    align-items: center;
+    padding-left: 1px;
+    gap: 2px;
+    font-family: monospace;
+    color: rgb(201, 24, 112);
+}
+
+.forgetAndRememberPart label:hover {
+    text-decoration: underline;
+    transition: 0.27s;
+    transform: scale(1.05);
+}
+
+.forgetAndRememberPart a {
+    text-decoration: none;
+    color: rgb(201, 24, 112);
+}
+
+.forgetAndRememberPart a:hover {
+    text-decoration: underline;
+    transition: 0.27s;
+    transform: scale(1.05);
+}
+
+.bottomPart {
+    padding-top: 32px;
+}
+
+.loginButton {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #312e2e;
+    background-color: #ecc5c0;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 35px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(255, 206, 240);
+    box-shadow: 1.5px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.275s;
+    transform: scale(1.010);   
+}
+
+.creatingBox {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+}
+
+.creatingBox p {
+    font-size: 0.875rem;
+    font-family: monospace;
+    color: rgb(180, 20, 100);
+}
+
+.creatingBox a {
+    text-decoration: none;
+    color: rgb(212, 114, 21);
+    font-size: 0.95rem;
+}
+
+.creatingBox a:hover {
+    text-decoration: underline;
+    transition: 0.27s;
+    font-size: 1.05rem;
+}
